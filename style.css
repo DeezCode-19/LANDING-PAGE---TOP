@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: black;
+}
+
+
+
+/* NAVBAR */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+
+}
+
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: orange;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: .3s ease;
+}
+
+
+.nav-links a:hover {
+    color: orange;
+}
+
+
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+
+
+/* BACKGROUND */
+
+.background {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #080b14;
+}
+
+
+
+.background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+
+    radial-gradient(
+        circle at 50% 100%,
+        rgba(58,175,169,.55),
+        transparent 55%
+    ),
+
+    radial-gradient(
+        circle at 50% 100%,
+        rgba(255,140,0,.35),
+        transparent 70%
+    ),
+
+    radial-gradient(
+        circle at 50% 100%,
+        rgba(238,130,238,.25),
+        transparent 80%
+    );
+
+
+    animation: glow 5s infinite alternate;
+
+}
+
+
+
+@keyframes glow {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+
+
+
+
+/* HERO */
+
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 8% 40px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero-content {
+    width: 55%;
+    color: white;
+}
+
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 18px;
+    border: 1px solid orange;
+    border-radius: 30px;
+    color: orange;
+}
+
+
+
+.badge span {
+    width: 10px;
+    height: 10px;
+    background: #00ff88;
+    border-radius: 50%;
+}
+
+
+
+
+.role {
+    margin-top: 25px;
+    letter-spacing: 4px;
+    color: #ccc;
+}
+
+
+
+
+.hero h1 {
+    margin-top: 10px;
+    font-size: 52px;
+    line-height: 1.1;
+}
+
+
+
+.hero h1 span {
+    background: linear-gradient(
+        90deg,
+        orange,
+        pink
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+
+.description {
+    margin-top: 20px;
+    max-width: 450px;
+    line-height: 1.7;
+    border-left: 3px solid orange;
+    padding-left: 15px;
+    color: #ddd;
+}
+
+
+
+
+
+.contact {
+    margin-top: 15px;
+    color: #ccc;
+}
+
+
+
+
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+
+
+.primary-btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: linear-gradient(
+        90deg,
+        orange,
+        pink
+    );
+
+
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s ease;
+}
+
+
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+    0 0 15px orange,
+    0 0 30px rgba(255,140,0,.5);
+}
+
+
+
+
+.outline-btn {
+    position: relative;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #555;
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+
+
+.outline-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    border: 1px solid orange;
+    transform: scale(0);
+    opacity: 0;
+    transition: .4s ease;
+}
+
+
+
+.outline-btn:hover {
+    color: orange;
+    border-color: orange;
+    box-shadow:
+    0 0 10px orange,
+    0 0 20px rgba(255,140,0,.5);
+}
+
+
+
+.outline-btn:hover::before {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+
+
+
+
+/* SOCIAL */
+.socials {
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+
+
+.socials a {
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:#222;
+    color:white;
+    font-size:22px;
+    text-decoration:none;
+    transition:.3s ease;
+}
+
+
+
+
+.socials a:hover {
+    transform:translateY(-5px);
+}
+
+
+
+.github:hover {
+    color:#ffffff;
+    box-shadow:
+    0 0 15px white;
+}
+
+
+
+.facebook:hover {
+    color:#1877f2;
+    box-shadow:
+    0 0 15px #1877f2;
+}
+
+
+
+
+
+/* STATS */
+
+
+.stats {
+    display: flex;
+    gap: 35px;
+    margin-top: 25px;
+}
+
+
+
+.stats h2 {
+    color: orange;
+    font-size: 32px;
+}
+
+
+
+.stats p {
+    color: #aaa;
+    font-size: 11px;
+}
+
+
+
+
+
+/* PROFILE SIDE */
+.hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.profile {
+    width:400px;
+    height:400px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #333;
+    position:relative;
+    z-index:3;
+    transform:translateX(-90px);
+    transition:0.4s ease;
+}
+
+
+.profile:hover {
+    transform:translateX(-90px) scale(1.05);
+    border-color:orange;
+    box-shadow:
+    0 0 25px rgba(255,140,0,0.8),
+    0 0 70px rgba(255,140,0,0.5),
+    0 0 120px rgba(255,140,0,0.3);
+}
+
+
+
+/* ANIMATED OUTLINE */
+.hero-image::before {
+    content:"";
+    position:absolute;
+    width:315px;
+    height:315px;
+    border-radius:50%;
+    border:3px solid orange;
+    transform:translateX(-90px);
+    z-index:2;
+    animation:outlineGlow 3s ease-in-out infinite;
+}
+
+
+
+@keyframes outlineGlow {
+    0% {
+        box-shadow:
+        0 0 10px orange,
+        0 0 20px rgba(255,140,0,.5);
+    }
+
+    50% {
+
+        box-shadow:
+        0 0 25px orange,
+        0 0 60px rgba(255,140,0,.7);
+
+    }
+
+    100% {
+
+        box-shadow:
+        0 0 10px orange,
+        0 0 20px rgba(255,140,0,.5);
+
+    }
+
+}
