@@ -466,3 +466,280 @@ body {
     }
 
 }
+
+/* RESPONSIVE DESIGN */
+
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 120px 5% 50px;
+
+    }
+
+
+
+    .hero-content {
+
+        width: 100%;
+
+    }
+
+
+
+    .description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+
+    .buttons,
+    .socials,
+    .stats {
+
+        justify-content: center;
+
+    }
+
+
+
+    .hero-image {
+
+        margin-top: 60px;
+
+    }
+
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+
+    .navbar {
+
+        padding:20px 5%;
+
+    }
+
+
+
+    .logo {
+
+        font-size:20px;
+
+    }
+
+
+
+    .nav-links {
+
+        gap:15px;
+
+    }
+
+
+
+    .nav-links a {
+
+        font-size:13px;
+
+    }
+
+
+
+
+    .hero {
+
+        padding-top:120px;
+
+    }
+
+
+
+    .hero h1 {
+
+        font-size:36px;
+
+    }
+
+
+
+    .role {
+
+        font-size:13px;
+
+    }
+
+
+
+    .description {
+
+        font-size:14px;
+
+        max-width:320px;
+
+    }
+
+
+
+    .contact p {
+
+        font-size:14px;
+
+    }
+
+
+
+
+    .buttons {
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+
+
+    .primary-btn,
+    .outline-btn {
+
+        width:180px;
+
+        text-align:center;
+
+    }
+
+
+
+
+    .stats {
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:25px;
+
+    }
+
+
+
+    .stats h2 {
+
+        font-size:28px;
+
+    }
+
+
+
+
+    .profile {
+
+        width:240px;
+
+        height:240px;
+
+        transform:translateX(0);
+
+    }
+
+
+
+    .profile:hover {
+
+        transform:scale(1.05);
+
+    }
+
+
+
+
+    .hero-image {
+
+        transform:translateX(0);
+
+    }
+
+
+
+    .hero-image::before {
+
+        width:255px;
+
+        height:255px;
+
+        transform:translateX(0);
+
+    }
+
+
+
+
+    .image-glow {
+
+        width:300px;
+
+        height:300px;
+
+    }
+
+
+
+
+    .floating-card {
+
+        font-size:11px;
+
+        padding:10px 15px;
+
+    }
+
+
+
+    .card-one {
+
+        top:-30px;
+
+        left:-20px;
+
+    }
+
+
+
+    .card-two {
+
+        right:-20px;
+
+    }
+
+
+
+    .card-three {
+
+        bottom:-30px;
+
+        left:-10px;
+
+    }
+
+
+}
